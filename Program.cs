@@ -48,6 +48,7 @@ namespace VideoMinify
                 await Task.Delay(50);
             }
             Console.WriteLine("All Tasks completed!");
+            Console.WriteLine("Press any key or close this window to exit!");
             Console.ReadKey();
             }
 
