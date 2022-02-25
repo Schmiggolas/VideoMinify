@@ -10,7 +10,7 @@ Automatically convert a video to mp4 and compress the shit out of it!
 
 ## Installation
 
-Check the release tab for a built Windows x64 version. I can build for any OS if you hit me up. Or just do it yourself.
+Check the [release tab](https://github.com/TehMightyPotato/VideoMinify/releases) for a built Windows x64 version. I can build for any OS if you hit me up. Or just do it yourself.
 
 You'll also need FFMPEG in your PATH. On Windows I recommend using [chocolatey](https://chocolatey.org/) to install FFMPEG. 
 
