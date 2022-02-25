@@ -6,14 +6,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using FFMpegCore;
 using FFMpegCore.Enums;
+using Newtonsoft.Json;
 
 namespace VideoMinify
 {
     class Program
     {
         public static Dictionary<Task,ConversionStatusText> Tasks = new Dictionary<Task, ConversionStatusText>();
+
+        private static Config config;
         static async Task Main(string[] args)
         {
+            config = ReadConfig();
             
             int counter = Console.CursorTop + 1;
             foreach (var item in args)
@@ -47,11 +51,23 @@ namespace VideoMinify
             Console.ReadKey();
             }
 
-        public static async Task ConvertVideoAsync(string path)
+        private static Config ReadConfig()
+        {
+            var path = Environment.CurrentDirectory + Path.DirectorySeparatorChar + "config.json";
+            if (File.Exists(path))
+            {
+                return JsonConvert.DeserializeObject<Config>(File.ReadAllText(path)) ?? new Config();
+            }
+
+            return new Config();
+        }
+        
+        
+        private static async Task ConvertVideoAsync(string path)
         {
             var stopwatch = new Stopwatch();
             var newFileName = Path.GetFileNameWithoutExtension(path);
-            newFileName += "_minified.mp4";
+            newFileName += config.Suffix + ".mp4";
             var directory = Path.GetDirectoryName(path);
             var outputPath = directory + Path.DirectorySeparatorChar + newFileName;
             try
@@ -59,9 +75,9 @@ namespace VideoMinify
                 Console.WriteLine($"Starting conversion of file {Path.GetFileName(path)}");
                 stopwatch.Start();
                 await FFMpegArguments.FromInputFiles(path)
-                    .UsingMultithreading(true)
+                    .UsingMultithreading(config.UseMultithreading)
                     .WithVideoCodec(VideoCodec.LibX264)
-                    .WithConstantRateFactor(28)
+                    .WithConstantRateFactor(config.ConstantRateFactor)
                     .OutputToFile(outputPath)
                     .ProcessAsynchronously();
                 stopwatch.Stop();

@@ -12,6 +12,14 @@
 
   <ItemGroup>
     <PackageReference Include="FFMpegCore" Version="2.2.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="config.json" />
+    <AdditionalFiles Include="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
   </ItemGroup>
 
 </Project>
