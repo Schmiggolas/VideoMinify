@@ -1,4 +1,6 @@
 {
-  "suffix": "TOPKEK.mp4",
-  "constant_rate_factor": 25
+  "suffix": "_minified",
+  "use_multithreading": true,
+  "constant_rate_factor": 28,
+  "overwrite_existing": true
 }

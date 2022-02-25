@@ -5,11 +5,9 @@ namespace VideoMinify
 {
     public class Config
     {
-        [JsonProperty("suffix")]
-        public string Suffix { get; set; } = "_minified";
-        [JsonProperty("use_multithreading")]
-        public bool UseMultithreading { get; set; } = true;
-        [JsonProperty("constant_rate_factor")]
-        public int ConstantRateFactor { get; set; } = 28;
+        [JsonProperty("suffix")] public string Suffix { get; set; } = "_minified";
+        [JsonProperty("use_multithreading")] public bool UseMultithreading { get; set; } = true;
+        [JsonProperty("constant_rate_factor")] public int ConstantRateFactor { get; set; } = 28;
+        [JsonProperty("overwrite_existing")] public bool OverwriteExisting { get; set; } = true;
     }
 }
