@@ -12,13 +12,15 @@ Automatically convert a video to mp4 and compress the shit out of it!
 
 Check the [release tab](https://github.com/TehMightyPotato/VideoMinify/releases) for a built Windows x64 version. I can build for any OS if you hit me up. Or just do it yourself.
 
-You'll also need FFMPEG in your PATH. On Windows I recommend using [chocolatey](https://chocolatey.org/) to install FFMPEG. 
+You'll also need FFMPEG in your PATH ([Windows tutorial](https://video.stackexchange.com/questions/20495/how-do-i-set-up-and-use-ffmpeg-in-windows)). On Windows I recommend using [chocolatey](https://chocolatey.org/) to install FFMPEG. 
 
 ## Usage
 
 Just drag & drop your video files onto the executable and this tool will create a minified copy of that video right next to your original one.
 
 It also works with multiple videos at a time. 
+
+Pro Tip: I save the binary + config in a random folder on my hard drive and use a shortcut on my desktop for easy access. Drag & Drop also works on the shortcut
  
 
 ## Configuration
