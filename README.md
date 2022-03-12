@@ -33,7 +33,7 @@ Codec is hard-coded to `lib-x264` because I couldn't be bothered to also include
 ### Options
 
 #### `suffix` 
-- the suffix the new file is created with. 
+- the suffix the new file is created with. (Input file "awesome_clip.mkv" creates output file "awesome_clip_minified.mp4" etc.)
 - Default = `_minified`
 
 #### `use_multithreading` 
