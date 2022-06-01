@@ -50,5 +50,7 @@ Codec is hard-coded to `lib-x264` because I couldn't be bothered to also include
 
 Thanks to the [FFMpegCore Team](https://github.com/rosenbjerg/FFMpegCore) for their C# wrapper of FFMPEG.
 
+And of course to [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) for providing the best JSON library for .NET. 
+
 ## License
 MIT. Do whatever you want.
