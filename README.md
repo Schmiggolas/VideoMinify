@@ -1,5 +1,7 @@
 # VideoMinify
 
+A small tool to (bulk-)compress video files easily.
+
 ## Description
 My internet connection is very bad. But I still want to upload videos for my friends. Heavy compression and conversion is basically the only thing working for me.
 Handling FFMPEG by hand every time is tedious and I tried to automate this step for myself. 
