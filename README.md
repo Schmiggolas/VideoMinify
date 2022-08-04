@@ -1,5 +1,4 @@
 # VideoMinify
-
 A small tool to (bulk-)compress video files easily.
 
 ## Description
