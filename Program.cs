@@ -27,6 +27,8 @@ namespace VideoMinify
             AppDomain.CurrentDomain.ProcessExit +=
                 (_, _) => _cancellationTokenSource.Cancel();
 
+            Console.CancelKeyPress += (_, _) => _cancellationTokenSource.Cancel();
+
             int counter = Console.CursorTop + 1;
             foreach (var item in args)
             {
