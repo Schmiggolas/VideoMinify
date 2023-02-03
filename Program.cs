@@ -46,7 +46,6 @@ namespace VideoMinify
             if (Tasks.Count == 0)
             {
                 Console.WriteLine("Nothing was converted because no supported file was given!");
-                Console.ReadKey();
                 return;
             }
 
@@ -61,8 +60,6 @@ namespace VideoMinify
             }
 
             Console.WriteLine("All Tasks completed!");
-            Console.WriteLine("Press any key or close this window to exit!");
-            Console.ReadKey();
         }
 
         private static Config ReadConfig()
