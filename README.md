@@ -1,8 +1,11 @@
 # VideoMinify
+
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A small tool to (bulk-)compress video files easily.
 
 ## Description
-My internet connection is very bad. But I still want to upload videos for my friends. Heavy compression and conversion is basically the only thing working for me.
+My internet connection ~~is~~ was very bad. But I still want to upload videos for my friends. Heavy compression and conversion is basically the only thing working for me.
 Handling FFMPEG by hand every time is tedious and I tried to automate this step for myself. 
 
 Meet VideoMinify!
@@ -27,9 +30,9 @@ Pro Tip: I save the binary + config in a random folder on my hard drive and use 
 ## Configuration
 
 This program will attempt to load a file called `config.json` in the same directory as the executable. There is a sample config provided in this repo. 
-If no config is present defaults (check options below) are used.
+If no config is present, defaults (check options below) are used.
 
-Codec is hard-coded to `lib-x264` because I couldn't be bothered to also include that.
+Codec is hard-coded to `lib-x264` because I choose to.
 
 ### Options
 
@@ -38,7 +41,7 @@ Codec is hard-coded to `lib-x264` because I couldn't be bothered to also include
 - Default = `_minified`
 
 #### `use_multithreading` 
-- use multithreading for the conversion process. 
+- tells FFMPEG to use multithreading for the conversion process. 
 - Default = `true`
 
 #### `constant_rate_factor` 
@@ -51,7 +54,4 @@ Codec is hard-coded to `lib-x264` because I couldn't be bothered to also include
 
 Thanks to the [FFMpegCore Team](https://github.com/rosenbjerg/FFMpegCore) for their C# wrapper of FFMPEG.
 
-And of course to [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) for providing the best JSON library for .NET. 
-
-## License
-MIT. Do whatever you want.
+And of course to [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) for providing the best JSON library for .NET
